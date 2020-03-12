@@ -5,6 +5,12 @@ public class Developer{
     public int bonusPotential;
     public ArrayList<String> skills;
 
+    public Developer(String company, int bonusPotential, ArrayList<String> skills) {
+        this.company = company;
+        this.bonusPotential = bonusPotential;
+        this.skills = skills;
+    }
+
     public String getCompany() {
         return company;
     }
