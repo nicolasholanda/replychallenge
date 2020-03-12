@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Room {
     private int width;
     private int height;
-    private HashMap<String, Object> cells;
+    private HashMap<String, ReplyerCell> cells;
     private int workPotential;
 
     public Room(int width, int height) {
@@ -28,11 +28,11 @@ public class Room {
         this.height = height;
     }
 
-    public HashMap<String, Object> getCells() {
+    public HashMap<String, ReplyerCell> getCells() {
         return cells;
     }
 
-    public void addCell(int row, int column, Object content){
+    public void addCell(int row, int column, ReplyerCell content){
         this.cells.put(row + "," + column, content);
     }
 
