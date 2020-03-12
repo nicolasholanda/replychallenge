@@ -2,6 +2,10 @@ public class ReplyerCell {
     private String type; //D, PM
     private Replyer content;
 
+    public ReplyerCell(String type){
+        this.type = type;
+    }
+
     public ReplyerCell(String type, Replyer content){
         this.type = type;
         this.content = content;
