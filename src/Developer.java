@@ -5,6 +5,8 @@ public class Developer extends Replyer{
 
     public Developer(String company, int bonusPotential, ArrayList<String> skills) {
         super(company, bonusPotential);
+        this.setCompany(company);
+        this.setBonusPotential(bonusPotential);
         this.skills = skills;
     }
 
