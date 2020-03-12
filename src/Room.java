@@ -4,6 +4,7 @@ public class Room {
     private int width;
     private int height;
     private HashMap<String, Object> cells;
+    private int workPotential;
 
     public Room(int width, int height) {
         this.width = width;
@@ -33,5 +34,13 @@ public class Room {
 
     public void addCell(int row, int column, Object content){
         this.cells.put(row + "," + column, content);
+    }
+
+    public int getWorkPotential() {
+        return workPotential;
+    }
+
+    public void setWorkPotential(int workPotential) {
+        this.workPotential = workPotential;
     }
 }
