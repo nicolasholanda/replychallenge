@@ -27,20 +27,20 @@ public class Main {
     }
 
     private static String convertRoomToString(Room room){
-        String outPut = "";
+        StringBuilder outPut = new StringBuilder();
         HashMap<String, ReplyerCell> stringReplyerCellHashMap = room.getCells();
         for (int i =0; i<room.getWidth(); i++) {
             for (int j=0; j<room.getHeight();j++){
                 if(stringReplyerCellHashMap.get(i+","+j).getType() == null){
-                    outPut = outPut+ "1\n";
+                    outPut.append("1\n");
                 }else if(stringReplyerCellHashMap.get(i+","+j).getType().equals("D")){
-                    outPut = outPut+"2\n";
+                    outPut.append("2\n");
                 }else if(stringReplyerCellHashMap.get(i+","+j).getType().equals("PM")){
-                    outPut = outPut+"3\n";
+                    outPut.append("3\n");
                 }
             }
         }
-        return outPut;
+        return outPut.toString();
     }
 
     private static Room returnMockRoom(){
