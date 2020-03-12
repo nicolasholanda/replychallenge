@@ -16,17 +16,17 @@ public class FileUtils {
         return data;
     }
 
-    public static void stringToObjects() {
+    public static Room stringToRoom() {
         String input = readInputFileAsString(INPUT_PATH);
-
-        int width = Integer.parseInt(input.substring(0, 1));
-        int height = Integer.parseInt(input.substring(2, 3));
-
-        Room room = new Room(width, height);
 
         String[] lines = input.split("\r\n");
 
-        for(int row = 1; row < height; row++) {
+        int width = Integer.parseInt(lines[0].split(" ")[0]);
+        int height = Integer.parseInt(lines[0].split(" ")[1]);
+
+        Room room = new Room(width, height);
+
+        for(int row = 1; row <= height; row++) {
             String currentLine = lines[row];
             for(int col = 0; col < width; col++) {
                 String cell = currentLine.substring(col, col+1);
@@ -36,7 +36,7 @@ public class FileUtils {
             }
         }
 
-        System.out.println(room);
+        return room;
     }
 
 }
