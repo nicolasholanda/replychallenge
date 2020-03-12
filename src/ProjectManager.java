@@ -1,25 +1,7 @@
-public class ProjectManager{
-    private String company;
-    private int bonusPotential;
+public class ProjectManager extends Replyer{
 
     public ProjectManager(String company, int bonusPotential) {
-        this.company = company;
-        this.bonusPotential = bonusPotential;
+        super(company, bonusPotential);
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public int getBonusPotential() {
-        return bonusPotential;
-    }
-
-    public void setBonusPotential(int bonusPotential) {
-        this.bonusPotential = bonusPotential;
-    }
 }
