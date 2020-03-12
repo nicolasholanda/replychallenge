@@ -19,7 +19,7 @@ public class FileUtils {
     public static Room stringToRoom() {
         String input = readInputFileAsString(INPUT_PATH);
 
-        String[] lines = input.split("\r\n");
+        String[] lines = input.split("\n");
 
         int width = Integer.parseInt(lines[0].split(" ")[0]);
         int height = Integer.parseInt(lines[0].split(" ")[1]);
